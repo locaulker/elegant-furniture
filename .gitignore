@@ -3,5 +3,5 @@ node_modules
 .DS_Store
 
 dist
-# next.config.*
-# now.json
+next.config.*
+now.json
