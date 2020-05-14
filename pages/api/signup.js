@@ -32,19 +32,19 @@ export default async (req, res) => {
     const newUser = await new User({
       name,
       email,
-      password: hash,
+      password: hash
     }).save()
     console.log({ newUser })
     // 5. create a cart with new user
     await new Cart({ user: newUser._id }).save()
     // 6. create token new user
     const token = jwt.sign({ userId: newUser._id }, process.env.JWT_SECRET, {
-      expiresIn: "7d",
+      expiresIn: "7d"
     })
     // 7. send back token
     res.status(201).json(token)
   } catch (error) {
-    console.log(error)
+    console.error(error)
     res.status(500).send("Error signing up user. Please try again.")
   }
 }
