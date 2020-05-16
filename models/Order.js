@@ -33,5 +33,5 @@ const OrderSchema = new mongoose.Schema(
     timestamps: true,
   }
 )
-
+// prettier-ignore
 export default mongoose.models.Order || mongoose.model("Order", OrderSchema)
