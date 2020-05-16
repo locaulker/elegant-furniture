@@ -3,7 +3,7 @@ import shortid from "shortid"
 
 const { String } = mongoose.Schema.Types
 
-const ProductsSchema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -28,4 +28,4 @@ const ProductsSchema = new mongoose.Schema({
 })
 
 export default mongoose.models.Product ||
-  mongoose.model("Product", ProductsSchema)
+  mongoose.model("Product", ProductSchema)
