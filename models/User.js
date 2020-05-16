@@ -22,12 +22,12 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       default: "user",
-      enom: ["user", "admin", "root"],
+      enum: ["user", "admin", "root"],
     },
   },
   {
     timestamps: true,
-  },
+  }
 )
 
 export default mongoose.models.User || mongoose.model("User", UserSchema)
