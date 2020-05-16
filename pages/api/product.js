@@ -38,7 +38,6 @@ async function handlePostRequest(req, res) {
     }).save()
     res.status(201).json(product)
   } catch (error) {
-    console.log(error)
     res.status(500).send("Server Error occurred in creating product")
   }
 }

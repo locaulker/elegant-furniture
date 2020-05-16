@@ -54,9 +54,8 @@ class MyApp extends App {
     window.addEventListener("storage", this.syncLougout)
   }
 
-  syncLougout = event => {
+  syncLogout = event => {
     if (event.key === "logout") {
-      console.log("logged out from storage")
       Router.push("/login")
     }
   }
